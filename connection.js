@@ -10,12 +10,6 @@ const sequelize = new Sequelize(
         host: config.HOST,
         dialect: config.dialect,
         port: config.port,
-        pool: {
-            max: config.pool.max,
-            min: config.pool.min,
-            acquire: config.pool.acquire,
-            idle: config.pool.idle
-        }
     }
 )
 
