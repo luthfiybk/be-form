@@ -6,6 +6,7 @@ require("dotenv").config();
 
 const corsOptions = {
   origin: "https://surveisosmed.vercel.app",
+  methods: "POST",
 };
 app.use(cors(corsOptions));
 
