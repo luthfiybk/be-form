@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+require("dotenv").config();
 
 const corsOptions = {
   origin: "https://surveisosmed.vercel.app",
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
 
 const db = require("./connection");
 require("./routes")(app);
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, "0.0.0.0", () => {
   console.log("Server is running on port 4000");
