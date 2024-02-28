@@ -5,5 +5,4 @@ module.exports = {
   DB: "railway",
   dialect: "mysql",
   port: 43875,
-  
 };
