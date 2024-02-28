@@ -12,12 +12,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+  res.send("Hello World");
 });
 
 const db = require("./connection");
 require("./routes")(app);
+const port = 4000;
 
-app.listen(4000, "0.0.0.0" ,() => {
+app.listen(port, "0.0.0.0", () => {
   console.log("Server is running on port 4000");
 });
