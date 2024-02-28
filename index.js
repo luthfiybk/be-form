@@ -4,15 +4,15 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const corsOptions = {
-    origin: "https://surveisosmed.vercel.app"
-}
+  origin: "https://surveisosmed.vercel.app",
+};
 app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+  res.send("Hello World");
 });
 
 const db = require("./connection");
@@ -21,6 +21,6 @@ const db = require("./connection");
 // });
 require("./routes")(app);
 
-app.listen(4000, "0.0.0.0", () => {
-    console.log("Server is running on port 4000");
+app.listen(4000, () => {
+  console.log("Server is running on port 4000");
 });
